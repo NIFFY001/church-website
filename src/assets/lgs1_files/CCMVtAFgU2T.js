@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("IGDInboxHeaderOffMsysImplQuery$Parameters",["IGDInboxHeaderOffMsysImplQuery_instagramRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("IGDInboxHeaderOffMsysImplQuery_instagramRelayOperation"),metadata:{},name:"IGDInboxHeaderOffMsysImplQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("IGDMqttIrisSubscriptionQuery$Parameters",["IGDMqttIrisSubscriptionQuery_instagramRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("IGDMqttIrisSubscriptionQuery_instagramRelayOperation"),metadata:{},name:"IGDMqttIrisSubscriptionQuery",operationKind:"query",text:null}};e.exports=a}),null);
