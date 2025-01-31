@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import logonew from "/src/assets/logonew.png";
 import church from "/src/assets/church.jpeg";
 import lgs3 from "/src/assets/lgs3.jpeg";
 import lgs4 from "/src/assets/lgs4.jpeg";
+import service1 from "/src/assets/service1.jpeg";
 import hero1 from "/src/assets/hero1.mp4";
 import { X, Menu, Facebook, Instagram, Youtube } from "lucide-react";
+import { BsFillCameraReelsFill } from "react-icons/bs";
 
 const ChurchWebsite = () => {
   const [currentPage, setCurrentPage] = React.useState("home");
@@ -66,15 +69,53 @@ const ChurchWebsite = () => {
 
         <div className="">
           <h2
-            className=" tracking-widest text-center md:w-[500px] leading-relaxed "
+            className="tracking-widest text-center md:w-[500px] w-auto  leading-relaxed p-3 md:p-0"
             style={{
               fontFamily:
                 "'Montserrat, Arial', Helvetica Neue, Helvetica, sans-serif",
+              fontStyle: "italic",
             }}
           >
             This is RCCG Light Generations where God's light dwells. We are
             transformed by the light.
           </h2>
+        </div>
+      </div>
+
+      <div className="">
+        <div className="flex flex-col w-full justify-center items-center p-3 text-center">
+          <h1
+            className="font-bold md:text-[30px] uppercase tracking-widest mb-4"
+            style={{
+              fontFamily:
+                "'Montserrat, Arial', Helvetica Neue, Helvetica, sans-serif",
+            }}
+          >
+            Worship with us
+          </h1>
+        </div>
+        <div className="flex flex-col md:flex-row items-center md:px-20 px-5  gap-[10px]">
+          <div className="md:w-[50%]">
+            <h2 className="font-bold tracking-widest md:text-[30px] mb-5">
+              KOINONIA HOUR
+            </h2>
+            <a
+              href="https://www.youtube.com/@RCCGLightGenerationsExpression"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="border py-5 flex items-center justify-center w-[160px]">
+                <div className="gap-2">
+                  <button className="flex items-center gap-2 px-5 mb-3">
+                    <BsFillCameraReelsFill /> WATCH LIVE
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div className="md:w-[50%]">
+            <img src={service1}></img>
+          </div>
         </div>
       </div>
 
@@ -205,7 +246,7 @@ const ChurchWebsite = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col ">
       {/* Navigation */}
       <nav className="bg-white shadow-lg">
         <div className="max-w-6xl mx-auto px-4">
