@@ -85,7 +85,7 @@ const ChurchWebsite = () => {
       <div className="">
         <div className="flex flex-col w-full justify-center items-center p-3 text-center">
           <h1
-            className="font-bold md:text-[30px] uppercase tracking-widest mb-4"
+            className="font-bold md:text-[30px] uppercase tracking-widest mb-2"
             style={{
               fontFamily:
                 "'Montserrat, Arial', Helvetica Neue, Helvetica, sans-serif",
@@ -94,18 +94,18 @@ const ChurchWebsite = () => {
             Worship with us
           </h1>
         </div>
-        <div className="flex flex-col md:flex-row items-center md:px-20 px-5  gap-[10px]">
+        <div className="flex flex-col md:flex-row items-center  md:px-20 px-5  gap-[10px] justify-center">
           <div className="md:w-[50%]">
-            <h2 className="font-bold tracking-widest md:text-[30px] mb-5">
-              KOINONIA HOUR
+            <h2 className="font-bold tracking-widest md:text-[30px] mb-5 text-center">
+              KOINONIA HOUR MID-WEEK SERVICE
             </h2>
             <a
               href="https://www.youtube.com/@RCCGLightGenerationsExpression"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="border py-5 flex items-center justify-center w-[160px]">
-                <div className="gap-2">
+              <div className="border py-5 flex items-center justify-center md:w-[160px]">
+                <div className="gap-3">
                   <button className="flex items-center gap-2 px-5 mb-3">
                     <BsFillCameraReelsFill /> WATCH LIVE
                   </button>
@@ -125,15 +125,18 @@ const ChurchWebsite = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-4">Sunday Service</h3>
-            <p>10:00 AM - 11:30 AM</p>
+            <p>8:00 AM - 11:30 AM</p>
           </div>
           <div className="text-center p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Bible Study</h3>
-            <p>Wednesday 7:00 PM</p>
+            <h3 className="text-xl font-semibold mb-4">Mid-week Service</h3>
+            <p>Wednesday 6:00 PM</p>
           </div>
           <div className="text-center p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Youth Group</h3>
-            <p>Friday 6:30 PM</p>
+            <h3 className="text-xl font-semibold mb-4">
+              Beginning The Month With JESUS
+            </h3>
+            <p>Every First Day Of The Month</p>
+            <p>6:00 AM</p>
           </div>
         </div>
       </div>
