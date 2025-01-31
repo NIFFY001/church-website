@@ -4,16 +4,20 @@ import logonew from "/src/assets/logonew.png";
 import church from "/src/assets/church.jpeg";
 import lgs3 from "/src/assets/lgs3.jpeg";
 import lgs4 from "/src/assets/lgs4.jpeg";
+import pastor from "/src/assets/pastor.jpeg";
 import service1 from "/src/assets/service1.jpeg";
 import hero1 from "/src/assets/hero1.mp4";
 import { X, Menu, Facebook, Instagram, Youtube } from "lucide-react";
 import { BsFillCameraReelsFill } from "react-icons/bs";
+import { Play, Pause } from "lucide-react";
+import audio from "/public/audio.mp3";
 
 const ChurchWebsite = () => {
   const [currentPage, setCurrentPage] = React.useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   // Navigation Links
+
   const navLinks = [
     { name: "Home", path: "home" },
     { name: "About", path: "about" },
@@ -54,7 +58,6 @@ const ChurchWebsite = () => {
           </button>
         </div>
       </div>
-
       <div className="flex flex-col justify-center items-center">
         <h1
           className=" font-bold md:text-[30px] uppercase tracking-widest "
@@ -81,7 +84,6 @@ const ChurchWebsite = () => {
           </h2>
         </div>
       </div>
-
       <div className="">
         <div className="flex flex-col w-full justify-center items-center p-3 text-center">
           <h1
@@ -113,30 +115,166 @@ const ChurchWebsite = () => {
               </div>
             </a>
           </div>
-          <div className="md:w-[50%]">
-            <img src={service1}></img>
+          <div className="md:w-[50%] ">
+            <img src={service1} className="rounded-xl"></img>
           </div>
         </div>
       </div>
-
       {/* Services Section */}
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 tracking-wider">
+          Our Services
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-4">Sunday Service</h3>
             <p>8:00 AM - 11:30 AM</p>
           </div>
           <div className="text-center p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Mid-week Service</h3>
+            <h3 className="text-xl font-semibold mb-4 tracking-wider">
+              Koinonia Hour
+            </h3>
             <p>Wednesday 6:00 PM</p>
           </div>
-          <div className="text-center p-6 rounded-lg shadow-lg">
+          <div className="text-center p-6 rounded-lg shadow-lg ">
             <h3 className="text-xl font-semibold mb-4">
-              Beginning The Month With JESUS
+              Beginning The Month With Jesus
             </h3>
             <p>Every First Day Of The Month</p>
             <p>6:00 AM</p>
+          </div>
+        </div>
+      </div>
+      <div className="">
+        <div className="bg-[#FFFFFF] md:p-20 p-5 rounded-lg shadow-lg    ">
+          <h2 className="text-lg font-semibold text-gray-700">
+            Monday, January 27, 2025
+          </h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-2">
+            Featured Excerpts
+          </h3>
+
+          <div className="mt-4 flex flex-col md:flex-row gap-4 items-center">
+            <img
+              src={pastor}
+              alt="Pastor"
+              className="w-100 h-100  object-cover rounded-xl"
+            />
+            <div>
+              <p className="text-sm font-bold text-gray-600">
+                Pastor Goke Aniyeloye
+              </p>
+              <p className="text-[15px] text-black">APICR/PICP Ondo 6</p>
+              <p className="text-md font-medium  text-gray-900">"Contend"</p>
+              <p className="text-black">
+                Text: 1 Chronicles 21:14-16, Judges 6:11-13
+              </p>
+              <p className="text-black">Message</p>
+              <p className="tracking-wider text-black ">
+                Having a desire to contend is good, but it is another thing to
+                place a demand. A man who does not know how to place demands in
+                life is a man destined for waste. When we talk about contending,
+                we are referring to engaging in spiritual warfare against forces
+                that have existed for generations. In the time of David, his men
+                prayed and fasted, yet their problems persisted—until they
+                raised an altar unto the Lord. ✓ _Prayer Points:_ My Father, my
+                Fighter, every evil altar in my parent’s house limiting my
+                destiny, be pulled down in Jesus' name. Every unseen eye
+                monitoring my journey, I declare you blind today, in Jesus'
+                name. Every wicked altar trying to rearrange my destiny,
+                collapse now, in Jesus' name. My Father, my Fighter, every altar
+                of limitation set to mock me, be pulled down in Jesus' name.
+                Every evil covering upon my life, be removed in Jesus' name.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-3">
+            <audio id="audioPlayer" className="w-full">
+              <source src="/public/audio.mp3" type="audio/mp3" />
+              Your browser does not support the audio element.
+            </audio>
+
+            <div className="flex items-center gap-2 mt-3">
+              <button
+                className="px-3 py-1 bg-gray-500 text-white rounded-lg"
+                onClick={() => {
+                  const audio = document.getElementById("audioPlayer");
+                  audio.currentTime -= 5;
+                }}
+              >
+                ⏪ -5s
+              </button>
+
+              <button
+                className="px-4 py-2 bg-gray-700 text-white rounded-lg"
+                onClick={() => {
+                  const audio = document.getElementById("audioPlayer");
+                  if (audio.paused) {
+                    audio.play();
+                  } else {
+                    audio.pause();
+                  }
+                }}
+              >
+                Play / Pause
+              </button>
+
+              <button
+                className="px-3 py-1 bg-gray-500 text-white rounded-lg"
+                onClick={() => {
+                  const audio = document.getElementById("audioPlayer");
+                  audio.currentTime += 5;
+                }}
+              >
+                +5s ⏩
+              </button>
+            </div>
+
+            <input
+              type="range"
+              id="seekBar"
+              className="w-full mt-2"
+              min="0"
+              max={audio ? audio.duration : 0} // Set max to the audio duration
+              value={audio ? audio.currentTime : 0} // Set value to the current time of the audio
+              step="1"
+              onChange={(e) => {
+                const audio = document.getElementById("audioPlayer");
+                audio.currentTime = e.target.value;
+              }}
+              onInput={(e) => {
+                // Update the slider's value in real-time
+                const audio = document.getElementById("audioPlayer");
+                audio.currentTime = e.target.value;
+              }}
+            />
+
+            <div className="flex justify-between text-sm text-gray-700 mt-1">
+              <span id="currentTime">00:00</span>
+              <span id="totalDuration">1:00:00</span>
+            </div>
+
+            <script>
+              {`
+      document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("audioPlayer");
+        const seekBar = document.getElementById("seekBar");
+        const currentTimeEl = document.getElementById("currentTime");
+        const totalDurationEl = document.getElementById("totalDuration");
+
+        audio.addEventListener("loadedmetadata", function () {
+          seekBar.max = audio.duration;
+          totalDurationEl.textContent = new Date(audio.duration * 1000).toISOString().substr(14, 5);
+        });
+
+        audio.addEventListener("timeupdate", function () {
+          seekBar.value = audio.currentTime;
+          currentTimeEl.textContent = new Date(audio.currentTime * 1000).toISOString().substr(14, 5);
+        });
+      });
+    `}
+            </script>
           </div>
         </div>
       </div>
